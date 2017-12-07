@@ -4,7 +4,7 @@
 winexe
 C#
 .cs
-C:\greatmaps\Demo.WindowsPresentation\obj\Debug\
+C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsPresentation\obj\Debug\
 Demo.WindowsPresentation
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 8-4439601
 
 151682949038
-12-953698390
+12136475816
 Controls\TrolleyTooltip.xaml;CustomMarkers\Circle.xaml;CustomMarkers\CustomMarkerRed.xaml;CustomMarkers\Cross.xaml;CustomMarkers\CustomMarkerDemo.xaml;CustomMarkers\Test.xaml;Windows\MainWindow.xaml;Windows\Message.xaml;
 
 False

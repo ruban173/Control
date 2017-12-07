@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="47a430f86c4748b9a7ad1900af46505a" Name="Diagram1">
+        <EntityTypeShape EntityType="PAOModel.Employees" Width="1.5" PointX="10" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PAOModel.Employees_education" Width="1.5" PointX="7.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PAOModel.Goods" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PAOModel.Goods_category" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PAOModel.Sale" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PAOModel.Sale_basket" Width="1.5" PointX="7.5" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PAOModel.Subsidiary_companies" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PAOModel.Subsidiary_companies_region" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="PAOModel.User_access" Width="1.5" PointX="7.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="PAOModel.UserAccess_history" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <AssociationConnector Association="PAOModel.FK_Employees_Employees_education" ManuallyRouted="false" />
+        <AssociationConnector Association="PAOModel.FK_Employees_User_access" ManuallyRouted="false" />
+        <AssociationConnector Association="PAOModel.FK_Goods_Goods_category" ManuallyRouted="false" />
+        <AssociationConnector Association="PAOModel.FK_Goods_Subsidiary_companies_region" ManuallyRouted="false" />
+        <AssociationConnector Association="PAOModel.FK_Sale_basket_Goods" ManuallyRouted="false" />
+        <AssociationConnector Association="PAOModel.FK_Sale_basket_Sale" ManuallyRouted="false" />
+        <AssociationConnector Association="PAOModel.FK_Sale_Subsidiary_companies_region" ManuallyRouted="false" />
+        <AssociationConnector Association="PAOModel.FK_Subsidiary_companies_region_Subsidiary_companies" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

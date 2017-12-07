@@ -146,7 +146,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(661, 665);
+            this.panel2.Size = new System.Drawing.Size(618, 698);
             this.panel2.TabIndex = 41;
             // 
             // MainMap
@@ -172,7 +172,7 @@
             this.MainMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.MainMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.MainMap.ShowTileGridLines = false;
-            this.MainMap.Size = new System.Drawing.Size(661, 665);
+            this.MainMap.Size = new System.Drawing.Size(618, 698);
             this.MainMap.TabIndex = 0;
             this.MainMap.Zoom = 0D;
             // 
@@ -185,7 +185,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(891, 665);
+            this.panel4.Size = new System.Drawing.Size(891, 698);
             this.panel4.TabIndex = 44;
             // 
             // splitter1
@@ -193,12 +193,12 @@
             this.splitter1.BackColor = System.Drawing.Color.Transparent;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
             this.splitter1.Enabled = false;
-            this.splitter1.Location = new System.Drawing.Point(661, 0);
+            this.splitter1.Location = new System.Drawing.Point(618, 0);
             this.splitter1.Margin = new System.Windows.Forms.Padding(2);
             this.splitter1.MinExtra = 390;
             this.splitter1.MinSize = 390;
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(2, 665);
+            this.splitter1.Size = new System.Drawing.Size(2, 698);
             this.splitter1.TabIndex = 42;
             this.splitter1.TabStop = false;
             // 
@@ -225,13 +225,12 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelMenu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelMenu.Image = null;
-            this.panelMenu.Location = new System.Drawing.Point(663, 0);
+            this.panelMenu.Location = new System.Drawing.Point(620, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.MinimumSize = new System.Drawing.Size(27, 27);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
             this.panelMenu.ShowExpandIcon = true;
-            this.panelMenu.Size = new System.Drawing.Size(228, 665);
+            this.panelMenu.Size = new System.Drawing.Size(271, 698);
             this.panelMenu.TabIndex = 40;
             this.panelMenu.Text = "Menu";
             this.panelMenu.ToolTipTextCloseIcon = null;
@@ -252,9 +251,8 @@
             this.xPanderPanelList1.Margin = new System.Windows.Forms.Padding(2);
             this.xPanderPanelList1.Name = "xPanderPanelList1";
             this.xPanderPanelList1.PanelColors = null;
-            this.xPanderPanelList1.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
             this.xPanderPanelList1.ShowExpandIcon = true;
-            this.xPanderPanelList1.Size = new System.Drawing.Size(228, 636);
+            this.xPanderPanelList1.Size = new System.Drawing.Size(271, 669);
             this.xPanderPanelList1.TabIndex = 0;
             this.xPanderPanelList1.Text = "xPanderPanelList1";
             // 
@@ -289,10 +287,9 @@
             this.xPanderPanelMain.IsClosable = false;
             this.xPanderPanelMain.Margin = new System.Windows.Forms.Padding(2);
             this.xPanderPanelMain.Name = "xPanderPanelMain";
-            this.xPanderPanelMain.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
-            this.xPanderPanelMain.Size = new System.Drawing.Size(228, 561);
+            this.xPanderPanelMain.Size = new System.Drawing.Size(271, 594);
             this.xPanderPanelMain.TabIndex = 0;
-            this.xPanderPanelMain.Text = "map";
+            this.xPanderPanelMain.Text = "Карта";
             this.xPanderPanelMain.ToolTipTextCloseIcon = null;
             this.xPanderPanelMain.ToolTipTextExpandIconPanelCollapsed = null;
             this.xPanderPanelMain.ToolTipTextExpandIconPanelExpanded = null;
@@ -311,7 +308,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(226, 536);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(269, 569);
             this.tableLayoutPanel4.TabIndex = 38;
             // 
             // tableLayoutPanel5
@@ -332,7 +329,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(176, 534);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(219, 567);
             this.tableLayoutPanel5.TabIndex = 30;
             // 
             // groupBox8
@@ -341,21 +338,20 @@
             this.groupBox8.Controls.Add(this.checkBoxPlacemarkInfo);
             this.groupBox8.Controls.Add(this.button5);
             this.groupBox8.Controls.Add(this.button4);
-            this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox8.Location = new System.Drawing.Point(3, 450);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(170, 74);
+            this.groupBox8.Size = new System.Drawing.Size(213, 100);
             this.groupBox8.TabIndex = 37;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "markers";
+            this.groupBox8.Text = "Компании";
             // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(6, 45);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(82, 24);
+            this.button7.Size = new System.Drawing.Size(99, 45);
             this.button7.TabIndex = 15;
-            this.button7.Text = "Zoom Center";
+            this.button7.Text = "Центрировать курсор";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -367,18 +363,18 @@
             this.checkBoxPlacemarkInfo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxPlacemarkInfo.Location = new System.Drawing.Point(94, 19);
             this.checkBoxPlacemarkInfo.Name = "checkBoxPlacemarkInfo";
-            this.checkBoxPlacemarkInfo.Size = new System.Drawing.Size(72, 17);
+            this.checkBoxPlacemarkInfo.Size = new System.Drawing.Size(92, 17);
             this.checkBoxPlacemarkInfo.TabIndex = 14;
-            this.checkBoxPlacemarkInfo.Text = "place info";
+            this.checkBoxPlacemarkInfo.Text = "Информация";
             this.checkBoxPlacemarkInfo.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(94, 45);
+            this.button5.Location = new System.Drawing.Point(138, 45);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(63, 24);
             this.button5.TabIndex = 13;
-            this.button5.Text = "Clear All";
+            this.button5.Text = "Очистить";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -388,7 +384,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(82, 24);
             this.button4.TabIndex = 12;
-            this.button4.Text = "Add Marker";
+            this.button4.Text = "Добавить";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -407,7 +403,7 @@
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox7.Location = new System.Drawing.Point(3, 289);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(170, 155);
+            this.groupBox7.Size = new System.Drawing.Size(213, 155);
             this.groupBox7.TabIndex = 35;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "routing";
@@ -530,10 +526,10 @@
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(3, 137);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(170, 146);
+            this.groupBox5.Size = new System.Drawing.Size(213, 146);
             this.groupBox5.TabIndex = 31;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "gmap";
+            this.groupBox5.Text = "Карты";
             // 
             // button16
             // 
@@ -584,9 +580,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(132, 49);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(33, 13);
+            this.label8.Size = new System.Drawing.Size(76, 13);
             this.label8.TabIndex = 38;
-            this.label8.Text = "mode";
+            this.label8.Text = "Отображение";
             // 
             // comboBoxMode
             // 
@@ -629,9 +625,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(132, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 13);
+            this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 31;
-            this.label7.Text = "type";
+            this.label7.Text = "Схема";
             // 
             // comboBoxMapType
             // 
@@ -656,19 +652,19 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(170, 128);
+            this.groupBox3.Size = new System.Drawing.Size(213, 128);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "coordinates";
+            this.groupBox3.Text = "Координаты";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(132, 74);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 13);
+            this.label6.Size = new System.Drawing.Size(57, 13);
             this.label6.TabIndex = 11;
-            this.label6.Text = "goto";
+            this.label6.Text = "Название";
             // 
             // textBoxGeo
             // 
@@ -676,7 +672,7 @@
             this.textBoxGeo.Name = "textBoxGeo";
             this.textBoxGeo.Size = new System.Drawing.Size(122, 20);
             this.textBoxGeo.TabIndex = 10;
-            this.textBoxGeo.Text = "lietuva vilnius";
+            this.textBoxGeo.Text = "Ейск";
             this.textBoxGeo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGeo_KeyPress);
             // 
             // button1
@@ -686,7 +682,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 24);
             this.button1.TabIndex = 9;
-            this.button1.Text = "Reload";
+            this.button1.Text = "Сбросить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -697,7 +693,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(72, 24);
             this.button8.TabIndex = 8;
-            this.button8.Text = "GoTo !";
+            this.button8.Text = "Найти";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -706,18 +702,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(132, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "lng";
+            this.label2.Text = "Долгота";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(132, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "lat";
+            this.label1.Text = "Широта";
             // 
             // textBoxLng
             // 
@@ -725,7 +721,6 @@
             this.textBoxLng.Name = "textBoxLng";
             this.textBoxLng.Size = new System.Drawing.Size(122, 20);
             this.textBoxLng.TabIndex = 1;
-            this.textBoxLng.Text = "25.2985095977783";
             // 
             // textBoxLat
             // 
@@ -733,7 +728,6 @@
             this.textBoxLat.Name = "textBoxLat";
             this.textBoxLat.Size = new System.Drawing.Size(122, 20);
             this.textBoxLat.TabIndex = 0;
-            this.textBoxLat.Text = "54.6961334816182";
             // 
             // tableLayoutPanel6
             // 
@@ -750,7 +744,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(44, 532);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(44, 565);
             this.tableLayoutPanel6.TabIndex = 31;
             // 
             // buttonZoomUp
@@ -777,7 +771,7 @@
             this.trackBar1.Minimum = 1;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(45, 478);
+            this.trackBar1.Size = new System.Drawing.Size(45, 511);
             this.trackBar1.TabIndex = 29;
             this.trackBar1.TickFrequency = 100;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
@@ -788,7 +782,7 @@
             // 
             this.buttonZoomDown.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonZoomDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonZoomDown.Location = new System.Drawing.Point(0, 505);
+            this.buttonZoomDown.Location = new System.Drawing.Point(0, 538);
             this.buttonZoomDown.Margin = new System.Windows.Forms.Padding(0);
             this.buttonZoomDown.Name = "buttonZoomDown";
             this.buttonZoomDown.Size = new System.Drawing.Size(45, 27);
@@ -827,8 +821,7 @@
             this.xPanderPanelCache.IsClosable = false;
             this.xPanderPanelCache.Margin = new System.Windows.Forms.Padding(2);
             this.xPanderPanelCache.Name = "xPanderPanelCache";
-            this.xPanderPanelCache.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
-            this.xPanderPanelCache.Size = new System.Drawing.Size(228, 25);
+            this.xPanderPanelCache.Size = new System.Drawing.Size(271, 25);
             this.xPanderPanelCache.TabIndex = 1;
             this.xPanderPanelCache.Text = "cache";
             this.xPanderPanelCache.ToolTipTextCloseIcon = null;
@@ -881,7 +874,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(226, 0);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(269, 0);
             this.tableLayoutPanel1.TabIndex = 41;
             // 
             // textBoxCacheSize
@@ -891,7 +884,7 @@
             this.textBoxCacheSize.Location = new System.Drawing.Point(18, 238);
             this.textBoxCacheSize.Name = "textBoxCacheSize";
             this.textBoxCacheSize.ReadOnly = true;
-            this.textBoxCacheSize.Size = new System.Drawing.Size(190, 28);
+            this.textBoxCacheSize.Size = new System.Drawing.Size(233, 28);
             this.textBoxCacheSize.TabIndex = 49;
             this.textBoxCacheSize.Text = "...";
             // 
@@ -902,7 +895,7 @@
             this.textBoxCacheStatus.Location = new System.Drawing.Point(18, 301);
             this.textBoxCacheStatus.Name = "textBoxCacheStatus";
             this.textBoxCacheStatus.ReadOnly = true;
-            this.textBoxCacheStatus.Size = new System.Drawing.Size(190, 28);
+            this.textBoxCacheStatus.Size = new System.Drawing.Size(233, 28);
             this.textBoxCacheStatus.TabIndex = 46;
             this.textBoxCacheStatus.Text = "...";
             // 
@@ -911,7 +904,7 @@
             this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button10.Location = new System.Drawing.Point(18, 19);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(190, 20);
+            this.button10.Size = new System.Drawing.Size(233, 20);
             this.button10.TabIndex = 5;
             this.button10.Text = "Import";
             this.button10.UseVisualStyleBackColor = true;
@@ -924,7 +917,7 @@
             this.textBoxMemory.Location = new System.Drawing.Point(18, 175);
             this.textBoxMemory.Name = "textBoxMemory";
             this.textBoxMemory.ReadOnly = true;
-            this.textBoxMemory.Size = new System.Drawing.Size(190, 28);
+            this.textBoxMemory.Size = new System.Drawing.Size(233, 28);
             this.textBoxMemory.TabIndex = 39;
             this.textBoxMemory.Text = "...";
             // 
@@ -946,7 +939,7 @@
             this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button9.Location = new System.Drawing.Point(18, 45);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(190, 20);
+            this.button9.Size = new System.Drawing.Size(233, 20);
             this.button9.TabIndex = 4;
             this.button9.Text = "Export";
             this.button9.UseVisualStyleBackColor = true;
@@ -957,7 +950,7 @@
             this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button11.Location = new System.Drawing.Point(18, 71);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(190, 20);
+            this.button11.Size = new System.Drawing.Size(233, 20);
             this.button11.TabIndex = 38;
             this.button11.Text = "Prefetch selected area";
             this.button11.UseVisualStyleBackColor = true;
@@ -977,7 +970,7 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Location = new System.Drawing.Point(18, 97);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(190, 20);
+            this.button2.Size = new System.Drawing.Size(233, 20);
             this.button2.TabIndex = 43;
             this.button2.Text = "Clear tiles in disk cache";
             this.button2.UseVisualStyleBackColor = true;
@@ -1007,7 +1000,7 @@
             this.button17.Location = new System.Drawing.Point(17, 122);
             this.button17.Margin = new System.Windows.Forms.Padding(2);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(192, 19);
+            this.button17.Size = new System.Drawing.Size(235, 19);
             this.button17.TabIndex = 50;
             this.button17.Text = "Open cache location";
             this.button17.UseVisualStyleBackColor = true;
@@ -1053,8 +1046,7 @@
             this.xPanderPanelInfo.Image = null;
             this.xPanderPanelInfo.Margin = new System.Windows.Forms.Padding(2);
             this.xPanderPanelInfo.Name = "xPanderPanelInfo";
-            this.xPanderPanelInfo.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
-            this.xPanderPanelInfo.Size = new System.Drawing.Size(228, 25);
+            this.xPanderPanelInfo.Size = new System.Drawing.Size(271, 25);
             this.xPanderPanelInfo.TabIndex = 3;
             this.xPanderPanelInfo.Text = "info";
             this.xPanderPanelInfo.ToolTipTextCloseIcon = null;
@@ -1096,7 +1088,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(226, 0);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(269, 0);
             this.tableLayoutPanel2.TabIndex = 14;
             // 
             // textBoxZoomCurrent
@@ -1106,7 +1098,7 @@
             this.textBoxZoomCurrent.Location = new System.Drawing.Point(18, 142);
             this.textBoxZoomCurrent.Name = "textBoxZoomCurrent";
             this.textBoxZoomCurrent.ReadOnly = true;
-            this.textBoxZoomCurrent.Size = new System.Drawing.Size(190, 28);
+            this.textBoxZoomCurrent.Size = new System.Drawing.Size(233, 28);
             this.textBoxZoomCurrent.TabIndex = 8;
             this.textBoxZoomCurrent.Text = "...";
             // 
@@ -1117,7 +1109,7 @@
             this.textBoxrouteCount.Location = new System.Drawing.Point(18, 236);
             this.textBoxrouteCount.Name = "textBoxrouteCount";
             this.textBoxrouteCount.ReadOnly = true;
-            this.textBoxrouteCount.Size = new System.Drawing.Size(190, 28);
+            this.textBoxrouteCount.Size = new System.Drawing.Size(233, 28);
             this.textBoxrouteCount.TabIndex = 12;
             this.textBoxrouteCount.Text = "...";
             // 
@@ -1146,7 +1138,7 @@
             this.textBoxLngCurrent.Location = new System.Drawing.Point(18, 79);
             this.textBoxLngCurrent.Name = "textBoxLngCurrent";
             this.textBoxLngCurrent.ReadOnly = true;
-            this.textBoxLngCurrent.Size = new System.Drawing.Size(190, 28);
+            this.textBoxLngCurrent.Size = new System.Drawing.Size(233, 28);
             this.textBoxLngCurrent.TabIndex = 5;
             this.textBoxLngCurrent.Text = "...";
             // 
@@ -1157,7 +1149,7 @@
             this.textBoxMarkerCount.Location = new System.Drawing.Point(18, 189);
             this.textBoxMarkerCount.Name = "textBoxMarkerCount";
             this.textBoxMarkerCount.ReadOnly = true;
-            this.textBoxMarkerCount.Size = new System.Drawing.Size(190, 28);
+            this.textBoxMarkerCount.Size = new System.Drawing.Size(233, 28);
             this.textBoxMarkerCount.TabIndex = 10;
             this.textBoxMarkerCount.Text = "...";
             // 
@@ -1186,7 +1178,7 @@
             this.textBoxLatCurrent.Location = new System.Drawing.Point(18, 32);
             this.textBoxLatCurrent.Name = "textBoxLatCurrent";
             this.textBoxLatCurrent.ReadOnly = true;
-            this.textBoxLatCurrent.Size = new System.Drawing.Size(190, 28);
+            this.textBoxLatCurrent.Size = new System.Drawing.Size(233, 28);
             this.textBoxLatCurrent.TabIndex = 4;
             this.textBoxLatCurrent.Text = "...";
             // 
@@ -1230,8 +1222,7 @@
             this.xPanderPanelLive.Margin = new System.Windows.Forms.Padding(2);
             this.xPanderPanelLive.Name = "xPanderPanelLive";
             this.xPanderPanelLive.Padding = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.xPanderPanelLive.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
-            this.xPanderPanelLive.Size = new System.Drawing.Size(228, 25);
+            this.xPanderPanelLive.Size = new System.Drawing.Size(271, 25);
             this.xPanderPanelLive.TabIndex = 2;
             this.xPanderPanelLive.Text = "live";
             this.xPanderPanelLive.ToolTipTextCloseIcon = null;
@@ -1267,7 +1258,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(226, 0);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(269, 0);
             this.tableLayoutPanel3.TabIndex = 6;
             // 
             // radioButtonNone
@@ -1324,7 +1315,7 @@
             this.GridConnections.RowTemplate.Height = 24;
             this.GridConnections.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GridConnections.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridConnections.Size = new System.Drawing.Size(192, 1);
+            this.GridConnections.Size = new System.Drawing.Size(235, 1);
             this.GridConnections.TabIndex = 5;
             this.GridConnections.VirtualMode = true;
             this.GridConnections.Visible = false;
@@ -1409,13 +1400,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(891, 665);
+            this.ClientSize = new System.Drawing.Size(891, 698);
             this.Controls.Add(this.panel4);
             this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(554, 105);
             this.Name = "GisForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GMap.NET - Great Maps for Windows Forms";
+            this.Text = "Карта расположения компаний";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainForm_KeyPress);

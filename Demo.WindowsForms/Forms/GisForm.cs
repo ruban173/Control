@@ -18,6 +18,8 @@ using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using GMap.NET.WindowsForms.ToolTips;
 using System.Reflection;
+using System.Linq;
+
 
 namespace Demo.WindowsForms
 {
@@ -44,11 +46,13 @@ namespace Demo.WindowsForms
       PointLatLng start;
       PointLatLng end;
 
-      public GisForm()
+        ConnectContext db;
+        public GisForm()
       {
          InitializeComponent();
+            db = new ConnectContext((new ConfigJson()).StringConnecting());
 
-         if (!GMapControl.IsDesignerHosted)
+            if (!GMapControl.IsDesignerHosted)
          {
             // add your custom map db provider
             //GMap.NET.CacheProviders.MySQLPureImageCache ch = new GMap.NET.CacheProviders.MySQLPureImageCache();
@@ -1755,7 +1759,32 @@ namespace Demo.WindowsForms
          Activate();
          TopMost = true;
          TopMost = false;
-      }
+
+            IEnumerable<Subsidiary_companies_region> company = db.Subsidiary_companies_region.ToList();
+            
+            
+            foreach (var item in company)
+            {
+                double latitude = Convert.ToDouble(item.latitude);
+                double longitude = Convert.ToDouble(item.longitude);
+                var pos = new PointLatLng(latitude, longitude);
+                GMapMarker m = new GMarkerGoogle(pos, GMarkerGoogleType.green_pushpin);
+                {
+                    m.ToolTipText = item.id_subsidiary_companies.ToString();
+                    m.ToolTipMode = MarkerTooltipMode.Always;
+                }
+
+                objects.Markers.Add(m); 
+            }
+        /*    var pos = new PointLatLng(NextDouble(rnd, MainMap.ViewArea.Top, MainMap.ViewArea.Bottom), NextDouble(rnd, MainMap.ViewArea.Left, MainMap.ViewArea.Right));
+            GMapMarker m = new GMarkerGoogle(pos, GMarkerGoogleType.green_pushpin);
+            {
+                m.ToolTipText = (tt++).ToString();
+                m.ToolTipMode = MarkerTooltipMode.Always;
+            }
+
+            objects.Markers.Add(m);*/
+        }
       #endregion
 
       #region -- menu panels expanders --
@@ -1846,7 +1875,7 @@ namespace Demo.WindowsForms
          }
          catch(Exception ex)
          {
-            MessageBox.Show("incorrect coordinate format: " + ex.Message);
+            MessageBox.Show("Некоректный формат: " + ex.Message);
          }
       }
 
@@ -1928,9 +1957,11 @@ namespace Demo.WindowsForms
          }
       }
 
-      // add marker on current position
+      // add marker on current position 11111111111111111111111111111111111111111111111111111111111111
       private void button4_Click(object sender, EventArgs e)
       {
+           
+
          GMarkerGoogle m = new GMarkerGoogle(currentMarker.Position, GMarkerGoogleType.green_pushpin);
          GMapMarkerRect mBorders = new GMapMarkerRect(currentMarker.Position);
          {
@@ -1955,6 +1986,7 @@ namespace Demo.WindowsForms
 
          if(p != null)
          {
+               
             mBorders.ToolTipText = p.Value.Address;
          }
          else
@@ -1965,7 +1997,7 @@ namespace Demo.WindowsForms
          objects.Markers.Add(m);
          objects.Markers.Add(mBorders);
 
-         RegeneratePolygon();
+        // RegeneratePolygon();
       }
 
       // clear routes
