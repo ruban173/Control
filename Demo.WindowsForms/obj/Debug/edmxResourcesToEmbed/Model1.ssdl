@@ -97,15 +97,10 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_subsidiary_companies" Type="int" />
-    <Property Name="country" Type="nvarchar" MaxLength="15" />
-    <Property Name="region" Type="nvarchar" MaxLength="30" />
-    <Property Name="settlement" Type="nvarchar" MaxLength="50" />
-    <Property Name="street" Type="nvarchar" MaxLength="70" />
-    <Property Name="home" Type="int" />
-    <Property Name="number" Type="int" />
-    <Property Name="structure" Type="int" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="adress" Type="nvarchar" MaxLength="300" />
     <Property Name="latitude" Type="nvarchar" MaxLength="50" />
-    <Property Name="longitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="longitude" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="User_access">
     <Key>
@@ -203,7 +198,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Sale_Subsidiary_companies_region">
-    <End Role="Subsidiary_companies_region" Type="Self.Subsidiary_companies_region" Multiplicity="0..1" />
+    <End Role="Subsidiary_companies_region" Type="Self.Subsidiary_companies_region" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Sale" Type="Self.Sale" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Subsidiary_companies_region">

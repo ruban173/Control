@@ -39,24 +39,14 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SubCompanies = new System.Windows.Forms.ComboBox();
             this.button7 = new System.Windows.Forms.Button();
             this.checkBoxPlacemarkInfo = new System.Windows.Forms.CheckBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.buttonExportToGpx = new System.Windows.Forms.Button();
-            this.MobileLogTo = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
-            this.MobileLogFrom = new System.Windows.Forms.DateTimePicker();
-            this.button14 = new System.Windows.Forms.Button();
-            this.buttonSetEnd = new System.Windows.Forms.Button();
-            this.buttonSetStart = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button16 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.checkBoxDebug = new System.Windows.Forms.CheckBox();
             this.button12 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -125,7 +115,6 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -232,7 +221,7 @@
             this.panelMenu.ShowExpandIcon = true;
             this.panelMenu.Size = new System.Drawing.Size(271, 698);
             this.panelMenu.TabIndex = 40;
-            this.panelMenu.Text = "Menu";
+            this.panelMenu.Text = "Меню";
             this.panelMenu.ToolTipTextCloseIcon = null;
             this.panelMenu.ToolTipTextExpandIconPanelCollapsed = "maximize";
             this.panelMenu.ToolTipTextExpandIconPanelExpanded = "minimize";
@@ -316,7 +305,6 @@
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.groupBox8, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.groupBox7, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.groupBox5, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.groupBox3, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -334,16 +322,35 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.label3);
+            this.groupBox8.Controls.Add(this.SubCompanies);
             this.groupBox8.Controls.Add(this.button7);
             this.groupBox8.Controls.Add(this.checkBoxPlacemarkInfo);
             this.groupBox8.Controls.Add(this.button5);
             this.groupBox8.Controls.Add(this.button4);
-            this.groupBox8.Location = new System.Drawing.Point(3, 450);
+            this.groupBox8.Location = new System.Drawing.Point(3, 289);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(213, 100);
+            this.groupBox8.Size = new System.Drawing.Size(213, 203);
             this.groupBox8.TabIndex = 37;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Компании";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Дочерняя компания";
+            // 
+            // SubCompanies
+            // 
+            this.SubCompanies.FormattingEnabled = true;
+            this.SubCompanies.Location = new System.Drawing.Point(6, 126);
+            this.SubCompanies.Name = "SubCompanies";
+            this.SubCompanies.Size = new System.Drawing.Size(197, 21);
+            this.SubCompanies.TabIndex = 16;
             // 
             // button7
             // 
@@ -388,133 +395,9 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.buttonExportToGpx);
-            this.groupBox7.Controls.Add(this.MobileLogTo);
-            this.groupBox7.Controls.Add(this.label3);
-            this.groupBox7.Controls.Add(this.button15);
-            this.groupBox7.Controls.Add(this.MobileLogFrom);
-            this.groupBox7.Controls.Add(this.button14);
-            this.groupBox7.Controls.Add(this.buttonSetEnd);
-            this.groupBox7.Controls.Add(this.buttonSetStart);
-            this.groupBox7.Controls.Add(this.button6);
-            this.groupBox7.Controls.Add(this.button3);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.Location = new System.Drawing.Point(3, 289);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(213, 155);
-            this.groupBox7.TabIndex = 35;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "routing";
-            // 
-            // buttonExportToGpx
-            // 
-            this.buttonExportToGpx.Location = new System.Drawing.Point(124, 78);
-            this.buttonExportToGpx.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonExportToGpx.Name = "buttonExportToGpx";
-            this.buttonExportToGpx.Size = new System.Drawing.Size(37, 37);
-            this.buttonExportToGpx.TabIndex = 48;
-            this.buttonExportToGpx.Text = "to GPX";
-            this.buttonExportToGpx.UseVisualStyleBackColor = true;
-            this.buttonExportToGpx.Click += new System.EventHandler(this.buttonExportToGpx_Click);
-            // 
-            // MobileLogTo
-            // 
-            this.MobileLogTo.CustomFormat = "yyyy\'.\'MM\'.\'dd HH\':\'mm";
-            this.MobileLogTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MobileLogTo.Location = new System.Drawing.Point(9, 99);
-            this.MobileLogTo.Margin = new System.Windows.Forms.Padding(2);
-            this.MobileLogTo.Name = "MobileLogTo";
-            this.MobileLogTo.ShowCheckBox = true;
-            this.MobileLogTo.Size = new System.Drawing.Size(110, 20);
-            this.MobileLogTo.TabIndex = 47;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Clear:";
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(104, 124);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(56, 24);
-            this.button15.TabIndex = 45;
-            this.button15.Text = "Polygons";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // MobileLogFrom
-            // 
-            this.MobileLogFrom.CustomFormat = "yyyy\'.\'MM\'.\'dd HH\':\'mm";
-            this.MobileLogFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MobileLogFrom.Location = new System.Drawing.Point(9, 78);
-            this.MobileLogFrom.Margin = new System.Windows.Forms.Padding(2);
-            this.MobileLogFrom.Name = "MobileLogFrom";
-            this.MobileLogFrom.ShowCheckBox = true;
-            this.MobileLogFrom.Size = new System.Drawing.Size(110, 20);
-            this.MobileLogFrom.TabIndex = 44;
-            this.MobileLogFrom.Value = new System.DateTime(2010, 5, 10, 15, 41, 0, 0);
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(88, 49);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(73, 24);
-            this.button14.TabIndex = 43;
-            this.button14.Text = "Mobile log...";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // buttonSetEnd
-            // 
-            this.buttonSetEnd.Location = new System.Drawing.Point(88, 19);
-            this.buttonSetEnd.Name = "buttonSetEnd";
-            this.buttonSetEnd.Size = new System.Drawing.Size(73, 24);
-            this.buttonSetEnd.TabIndex = 42;
-            this.buttonSetEnd.Text = "set End";
-            this.buttonSetEnd.UseVisualStyleBackColor = true;
-            this.buttonSetEnd.Click += new System.EventHandler(this.buttonSetEnd_Click);
-            // 
-            // buttonSetStart
-            // 
-            this.buttonSetStart.Location = new System.Drawing.Point(9, 19);
-            this.buttonSetStart.Name = "buttonSetStart";
-            this.buttonSetStart.Size = new System.Drawing.Size(73, 24);
-            this.buttonSetStart.TabIndex = 41;
-            this.buttonSetStart.Text = "set Start";
-            this.buttonSetStart.UseVisualStyleBackColor = true;
-            this.buttonSetStart.Click += new System.EventHandler(this.buttonSetStart_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(45, 124);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(55, 24);
-            this.button6.TabIndex = 34;
-            this.button6.Text = "Routes";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(9, 49);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 24);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "Add Route";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.button16);
-            this.groupBox5.Controls.Add(this.button13);
             this.groupBox5.Controls.Add(this.checkBoxDebug);
             this.groupBox5.Controls.Add(this.button12);
             this.groupBox5.Controls.Add(this.label8);
@@ -533,45 +416,36 @@
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(92, 92);
+            this.button16.Location = new System.Drawing.Point(99, 116);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(69, 24);
+            this.button16.Size = new System.Drawing.Size(108, 24);
             this.button16.TabIndex = 49;
-            this.button16.Text = "GPX...";
+            this.button16.Text = "Загрузить GPX";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(9, 117);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(73, 24);
-            this.button13.TabIndex = 41;
-            this.button13.Text = "Get Static";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // checkBoxDebug
             // 
             this.checkBoxDebug.AutoSize = true;
+            this.checkBoxDebug.Checked = true;
+            this.checkBoxDebug.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxDebug.Location = new System.Drawing.Point(104, 74);
             this.checkBoxDebug.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDebug.Name = "checkBoxDebug";
-            this.checkBoxDebug.Size = new System.Drawing.Size(45, 17);
+            this.checkBoxDebug.Size = new System.Drawing.Size(56, 17);
             this.checkBoxDebug.TabIndex = 40;
-            this.checkBoxDebug.Text = "Grid";
+            this.checkBoxDebug.Text = "Сетка";
             this.checkBoxDebug.UseVisualStyleBackColor = true;
             this.checkBoxDebug.CheckedChanged += new System.EventHandler(this.checkBoxDebug_CheckedChanged);
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(92, 117);
+            this.button12.Location = new System.Drawing.Point(9, 117);
             this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(69, 24);
+            this.button12.Size = new System.Drawing.Size(80, 24);
             this.button12.TabIndex = 39;
-            this.button12.Text = "Save View";
+            this.button12.Text = "Сохранить";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
@@ -601,9 +475,9 @@
             this.checkBoxCanDrag.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxCanDrag.Location = new System.Drawing.Point(9, 95);
             this.checkBoxCanDrag.Name = "checkBoxCanDrag";
-            this.checkBoxCanDrag.Size = new System.Drawing.Size(73, 17);
+            this.checkBoxCanDrag.Size = new System.Drawing.Size(75, 17);
             this.checkBoxCanDrag.TabIndex = 36;
-            this.checkBoxCanDrag.Text = "Drag Map";
+            this.checkBoxCanDrag.Text = "Drag Drop";
             this.checkBoxCanDrag.UseVisualStyleBackColor = true;
             this.checkBoxCanDrag.CheckedChanged += new System.EventHandler(this.checkBoxCanDrag_CheckedChanged);
             // 
@@ -614,9 +488,9 @@
             this.checkBoxCurrentMarker.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxCurrentMarker.Location = new System.Drawing.Point(9, 73);
             this.checkBoxCurrentMarker.Name = "checkBoxCurrentMarker";
-            this.checkBoxCurrentMarker.Size = new System.Drawing.Size(96, 17);
+            this.checkBoxCurrentMarker.Size = new System.Drawing.Size(65, 17);
             this.checkBoxCurrentMarker.TabIndex = 35;
-            this.checkBoxCurrentMarker.Text = "Current Marker";
+            this.checkBoxCurrentMarker.Text = "Маркер";
             this.checkBoxCurrentMarker.UseVisualStyleBackColor = true;
             this.checkBoxCurrentMarker.CheckedChanged += new System.EventHandler(this.checkBoxCurrentMarker_CheckedChanged);
             // 
@@ -1042,6 +916,7 @@
             this.xPanderPanelInfo.CustomColors.FlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.xPanderPanelInfo.CustomColors.FlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.xPanderPanelInfo.CustomColors.InnerBorderColor = System.Drawing.SystemColors.Window;
+            this.xPanderPanelInfo.Enabled = false;
             this.xPanderPanelInfo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.xPanderPanelInfo.Image = null;
             this.xPanderPanelInfo.Margin = new System.Windows.Forms.Padding(2);
@@ -1216,6 +1091,7 @@
             this.xPanderPanelLive.CustomColors.FlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.xPanderPanelLive.CustomColors.FlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.xPanderPanelLive.CustomColors.InnerBorderColor = System.Drawing.SystemColors.Window;
+            this.xPanderPanelLive.Enabled = false;
             this.xPanderPanelLive.ForeColor = System.Drawing.SystemColors.ControlText;
             this.xPanderPanelLive.Image = null;
             this.xPanderPanelLive.IsClosable = false;
@@ -1420,8 +1296,6 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -1493,20 +1367,8 @@
       private System.Windows.Forms.CheckBox checkBoxPlacemarkInfo;
       private System.Windows.Forms.Button button5;
       private System.Windows.Forms.Button button4;
-      private System.Windows.Forms.GroupBox groupBox7;
-      private System.Windows.Forms.Button buttonExportToGpx;
-      private System.Windows.Forms.DateTimePicker MobileLogTo;
-      private System.Windows.Forms.Label label3;
-      private System.Windows.Forms.Button button15;
-      private System.Windows.Forms.DateTimePicker MobileLogFrom;
-      private System.Windows.Forms.Button button14;
-      private System.Windows.Forms.Button buttonSetEnd;
-      private System.Windows.Forms.Button buttonSetStart;
-      private System.Windows.Forms.Button button6;
-      private System.Windows.Forms.Button button3;
       private System.Windows.Forms.GroupBox groupBox5;
       private System.Windows.Forms.Button button16;
-      private System.Windows.Forms.Button button13;
       private System.Windows.Forms.CheckBox checkBoxDebug;
       private System.Windows.Forms.Button button12;
       private System.Windows.Forms.Label label8;
@@ -1533,6 +1395,8 @@
       private System.Windows.Forms.TextBox textBoxCacheSize;
       private System.Windows.Forms.Button button17;
       private System.Windows.Forms.CheckBox checkBoxTileHost;
-   }
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox SubCompanies;
+    }
 }
 

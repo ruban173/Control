@@ -23,13 +23,8 @@ namespace Demo.WindowsForms
     
         public int id { get; set; }
         public Nullable<int> id_subsidiary_companies { get; set; }
-        public string country { get; set; }
-        public string region { get; set; }
-        public string settlement { get; set; }
-        public string street { get; set; }
-        public Nullable<int> home { get; set; }
-        public Nullable<int> number { get; set; }
-        public Nullable<int> structure { get; set; }
+        public string city { get; set; }
+        public string adress { get; set; }
         public string latitude { get; set; }
         public string longitude { get; set; }
     

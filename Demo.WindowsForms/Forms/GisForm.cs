@@ -19,6 +19,7 @@ using GMap.NET.WindowsForms.Markers;
 using GMap.NET.WindowsForms.ToolTips;
 using System.Reflection;
 using System.Linq;
+using System.Collections;
 
 
 namespace Demo.WindowsForms
@@ -130,8 +131,7 @@ namespace Demo.WindowsForms
             // get cache modes
             checkBoxUseRouteCache.Checked = MainMap.Manager.UseRouteCache;
 
-            MobileLogFrom.Value = DateTime.Today;
-            MobileLogTo.Value = DateTime.Now;
+           
 
             // get zoom  
             trackBar1.Minimum = MainMap.MinZoom * 100;
@@ -205,25 +205,21 @@ namespace Demo.WindowsForms
                // add my city location for demo
                GeoCoderStatusCode status = GeoCoderStatusCode.Unknow;
                {
-                  PointLatLng? pos = GMapProviders.GoogleMap.GetPoint("Russian, Moskow", out status);
+                  PointLatLng? pos = GMapProviders.GoogleMap.GetPoint("Россия, Краснодар", out status);
                   if(pos != null && status == GeoCoderStatusCode.G_GEO_SUCCESS)
                   {
                      currentMarker.Position = pos.Value;
 
                      GMapMarker myCity = new GMarkerGoogle(pos.Value, GMarkerGoogleType.green_small);
                      myCity.ToolTipMode = MarkerTooltipMode.Always;
-                     myCity.ToolTipText = "Добро пожаловать в Россию";
+                     myCity.ToolTipText = "Краснодар";
                      objects.Markers.Add(myCity);
 
                           
                         }
                }
 
-               // add some points in lithuania
-               AddLocationLithuania("Moskow");
-               AddLocationLithuania("Ейск");
-            //   AddLocationLithuania("Šiauliai");
-           //    AddLocationLithuania("Panevėžys");
+              
 
                if(objects.Markers.Count > 0)
                {
@@ -1282,7 +1278,7 @@ namespace Demo.WindowsForms
       }
 
       // load mobile gps log
-      void AddGpsMobileLogRoutes(string file)
+    /*  void AddGpsMobileLogRoutes(string file)
       {
          try
          {
@@ -1361,7 +1357,7 @@ namespace Demo.WindowsForms
             Debug.WriteLine("AddGpsMobileLogRoutes: " + ex.ToString());
          }
       }
-
+        */
       /// <summary>
       /// adds marker using geocoder
       /// </summary>
@@ -1384,6 +1380,7 @@ namespace Demo.WindowsForms
 
             objects.Markers.Add(m);
             objects.Markers.Add(mBorders);
+               
          }
       }
 
@@ -1666,10 +1663,12 @@ namespace Demo.WindowsForms
          textBoxZoomCurrent.Text = MainMap.Zoom.ToString();
       }
 
-      // click on some marker
-      void MainMap_OnMarkerClick(GMapMarker item, MouseEventArgs e)
+      
+        // click on some marker
+        void MainMap_OnMarkerClick(GMapMarker item, MouseEventArgs e)
       {
-         if(e.Button == System.Windows.Forms.MouseButtons.Left)
+            MessageBox.Show(String.Format("Marker {0} was clicked.", item.Tag));
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
          {
             if(item is GMapMarkerRect)
             {
@@ -1752,17 +1751,19 @@ namespace Demo.WindowsForms
       PointLatLng lastPosition;
       int lastZoom;
 
-      // center markers on start
-      private void MainForm_Load(object sender, EventArgs e)
-      {
-         trackBar1.Value = (int) MainMap.Zoom * 100;
-         Activate();
-         TopMost = true;
-         TopMost = false;
+      private void LoadDataSubCompanies()
+        {
+           
+                SubCompanies.DataSource = db.Subsidiary_companies.ToList();
+                SubCompanies.ValueMember = "id";
+                SubCompanies.DisplayMember = "title";
+        }
+       
 
+
+        private void LoadSubCompRegions()
+        {
             IEnumerable<Subsidiary_companies_region> company = db.Subsidiary_companies_region.ToList();
-            
-            
             foreach (var item in company)
             {
                 double latitude = Convert.ToDouble(item.latitude);
@@ -1770,20 +1771,28 @@ namespace Demo.WindowsForms
                 var pos = new PointLatLng(latitude, longitude);
                 GMapMarker m = new GMarkerGoogle(pos, GMarkerGoogleType.green_pushpin);
                 {
-                    m.ToolTipText = item.id_subsidiary_companies.ToString();
+                    string text = item.Subsidiary_companies.title;
+                    m.ToolTipText = text + " " + item.adress;
                     m.ToolTipMode = MarkerTooltipMode.Always;
+                    m.Tag = item.id;
+
+
                 }
-
-                objects.Markers.Add(m); 
+                
+                objects.Markers.Add(m);
             }
-        /*    var pos = new PointLatLng(NextDouble(rnd, MainMap.ViewArea.Top, MainMap.ViewArea.Bottom), NextDouble(rnd, MainMap.ViewArea.Left, MainMap.ViewArea.Right));
-            GMapMarker m = new GMarkerGoogle(pos, GMarkerGoogleType.green_pushpin);
-            {
-                m.ToolTipText = (tt++).ToString();
-                m.ToolTipMode = MarkerTooltipMode.Always;
-            }
-
-            objects.Markers.Add(m);*/
+        }
+        
+        // center markers on start
+      private void MainForm_Load(object sender, EventArgs e)
+      {
+         trackBar1.Value = (int) MainMap.Zoom * 100;
+         Activate();
+         TopMost = true;
+         TopMost = false;
+         LoadDataSubCompanies();
+            LoadSubCompRegions();
+       
         }
       #endregion
 
@@ -1977,28 +1986,44 @@ namespace Demo.WindowsForms
          if(checkBoxPlacemarkInfo.Checked)
          {
             GeoCoderStatusCode status;
+            
             var ret = GMapProviders.GoogleMap.GetPlacemark(currentMarker.Position, out status);
             if(status == GeoCoderStatusCode.G_GEO_SUCCESS && ret != null)
             {
                p = ret;
+                
+             
             }
          }
 
          if(p != null)
          {
-               
-            mBorders.ToolTipText = p.Value.Address;
-         }
+                Subsidiary_companies_region subcompany = new Subsidiary_companies_region
+                {
+                    id_subsidiary_companies = (int)SubCompanies.SelectedValue,
+                    city = p.Value.DistrictName,
+                    
+                    adress = p.Value.Address,
+                    latitude=m.Position.Lat.ToString(),
+                    longitude=m.Position.Lng.ToString(),
+
+                };
+                db.Subsidiary_companies_region.Add(subcompany);
+                db.SaveChanges();
+                mBorders.ToolTipText = SubCompanies.Text+ "\n "+ p.Value.Address;
+                objects.Markers.Add(m);
+                objects.Markers.Add(mBorders);
+            }
          else
          {
-            mBorders.ToolTipText = currentMarker.Position.ToString();
+                MessageBox.Show("Точный адрес не установлен");
+         //   mBorders.ToolTipText = currentMarker.Position.ToString();
          }
 
-         objects.Markers.Add(m);
-         objects.Markers.Add(mBorders);
-
-        // RegeneratePolygon();
-      }
+       
+         
+           // RegeneratePolygon();
+        }
 
       // clear routes
       private void button6_Click(object sender, EventArgs e)
@@ -2145,7 +2170,7 @@ namespace Demo.WindowsForms
       }
 
       // add gps log from mobile
-      private void button14_Click(object sender, EventArgs e)
+     /* private void button14_Click(object sender, EventArgs e)
       {
          using(FileDialog dlg = new OpenFileDialog())
          {
@@ -2175,7 +2200,7 @@ namespace Demo.WindowsForms
             }
          }
       }
-
+        */
       // key-up events
       private void MainForm_KeyUp(object sender, KeyEventArgs e)
       {
@@ -2363,7 +2388,7 @@ namespace Demo.WindowsForms
       }
 
       // export mobile gps log to gpx file
-      private void buttonExportToGpx_Click(object sender, EventArgs e)
+   /*   private void buttonExportToGpx_Click(object sender, EventArgs e)
       {
          try
          {
@@ -2406,7 +2431,7 @@ namespace Demo.WindowsForms
          {
             MessageBox.Show("GPX failed to save: " + ex.Message, "GMap.NET", MessageBoxButtons.OK, MessageBoxIcon.Error);
          }
-      }
+      }*/
 
       // load gpx file
       private void button16_Click(object sender, EventArgs e)

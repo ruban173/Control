@@ -349,7 +349,8 @@ namespace GMap.NET.MapProviders
         /// </summary>
         public bool InvertedAxisY = false;
 
-        static string languageStr = "en";
+        //static string languageStr = "en";
+       static string languageStr = "ru";
         public static string LanguageStr
         {
             get
@@ -357,7 +358,8 @@ namespace GMap.NET.MapProviders
                 return languageStr;
             }
         }
-        static LanguageType language = LanguageType.English;
+      //  static LanguageType language = LanguageType.English;
+      static LanguageType language = LanguageType.Russian;
 
         /// <summary>
         /// map language
