@@ -87,5 +87,66 @@ namespace Demo.WindowsForms
         {
             RefreshModels();
         }
+
+        
+
+        private void gridSubsidiaryCompaniesRegion_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gridSubsidiaryCompaniesRegion.CurrentRow != null)
+            {
+                
+                Subsidiary_companies_region currentCompaniesRegion = gridSubsidiaryCompaniesRegion.CurrentRow.DataBoundItem as Subsidiary_companies_region;
+                DataTable table = new DataTable("TableInfo");
+                DataColumn column;
+
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.Int32");
+                column.ColumnName = "id";
+                column.AutoIncrement = true;
+                column.Caption = "ID";
+                column.ReadOnly = true;
+                column.Unique = true;
+                table.Columns.Add(column);
+                column = new DataColumn();
+
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "countEmp";
+                column.AutoIncrement = true;
+                column.Caption = "Количество сотрудников";
+                column.ReadOnly = true;
+                column.Unique = true;
+                table.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "sumAll";
+                column.AutoIncrement = true;
+                column.Caption = "Доход всего";
+                column.ReadOnly = true;
+                column.Unique = true;
+                table.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "sumDD";
+                column.AutoIncrement = true;
+                column.Caption = "Доход за день";
+                column.ReadOnly = true;
+                column.Unique = true;
+                table.Columns.Add(column);
+
+                var sum = db.Sale.Where(s => s.id == currentCompaniesRegion.id).Sum(s => s.price);
+                  DataRow row = table.NewRow();
+                  row["id"] = 1;
+                  row["countEmp"] = db.Employees.Where(s=>s.id== currentCompaniesRegion.id).Count();
+                  row["sumAll"] = (sum==null)?0.ToString():sum.ToString();
+                 // row["sumDD"] = db.Sale.Where(s => s.id == currentCompaniesRegion.id && s.date_up==DateTime.Now.Date).Sum(s => s.price).Value.ToString();
+
+                table.Rows.Add(row);
+
+                gridInfCompany.DataSource = table;
+            }
+        }
     }
 }

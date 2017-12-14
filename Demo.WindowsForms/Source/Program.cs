@@ -20,8 +20,8 @@ namespace Demo.WindowsForms
       {
          Application.EnableVisualStyles();
          Application.SetCompatibleTextRenderingDefault(false);
-       //  Application.Run(new Main());
-         Application.Run(new GisForm());
+        Application.Run(new Main());
+        // Application.Run(new GisForm());
             //  Application.Run(new Autorization());
         }
    }

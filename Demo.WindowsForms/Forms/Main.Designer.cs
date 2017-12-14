@@ -33,6 +33,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.картаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.дочернииКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gridSubsidiaryCompanies = new System.Windows.Forms.DataGridView();
@@ -41,10 +45,6 @@
             this.gridSubsidiaryCompaniesRegion = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridInfCompany = new System.Windows.Forms.DataGridView();
-            this.дочернииКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -112,6 +112,34 @@
             this.картаToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.картаToolStripMenuItem.Text = "Карта";
             this.картаToolStripMenuItem.Click += new System.EventHandler(this.картаToolStripMenuItem_Click);
+            // 
+            // дочернииКомпанииToolStripMenuItem
+            // 
+            this.дочернииКомпанииToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.добавитьToolStripMenuItem,
+            this.изменитьToolStripMenuItem,
+            this.удалитьToolStripMenuItem});
+            this.дочернииКомпанииToolStripMenuItem.Name = "дочернииКомпанииToolStripMenuItem";
+            this.дочернииКомпанииToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
+            this.дочернииКомпанииToolStripMenuItem.Text = "Дочернии компании";
+            // 
+            // добавитьToolStripMenuItem
+            // 
+            this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.добавитьToolStripMenuItem.Text = "Добавить";
+            // 
+            // изменитьToolStripMenuItem
+            // 
+            this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
+            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.изменитьToolStripMenuItem.Text = "Изменить";
+            // 
+            // удалитьToolStripMenuItem
+            // 
+            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.удалитьToolStripMenuItem.Text = "Удалить";
             // 
             // splitContainer1
             // 
@@ -190,6 +218,8 @@
             this.gridSubsidiaryCompaniesRegion.Name = "gridSubsidiaryCompaniesRegion";
             this.gridSubsidiaryCompaniesRegion.Size = new System.Drawing.Size(464, 209);
             this.gridSubsidiaryCompaniesRegion.TabIndex = 0;
+            this.gridSubsidiaryCompaniesRegion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSubsidiaryCompaniesRegion_CellClick);
+          
             // 
             // groupBox3
             // 
@@ -211,34 +241,6 @@
             this.gridInfCompany.Size = new System.Drawing.Size(464, 149);
             this.gridInfCompany.TabIndex = 0;
             // 
-            // дочернииКомпанииToolStripMenuItem
-            // 
-            this.дочернииКомпанииToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьToolStripMenuItem,
-            this.изменитьToolStripMenuItem,
-            this.удалитьToolStripMenuItem});
-            this.дочернииКомпанииToolStripMenuItem.Name = "дочернииКомпанииToolStripMenuItem";
-            this.дочернииКомпанииToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
-            this.дочернииКомпанииToolStripMenuItem.Text = "Дочернии компании";
-            // 
-            // добавитьToolStripMenuItem
-            // 
-            this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.добавитьToolStripMenuItem.Text = "Добавить";
-            // 
-            // изменитьToolStripMenuItem
-            // 
-            this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.изменитьToolStripMenuItem.Text = "Изменить";
-            // 
-            // удалитьToolStripMenuItem
-            // 
-            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.удалитьToolStripMenuItem.Text = "Удалить";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,7 +249,9 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);

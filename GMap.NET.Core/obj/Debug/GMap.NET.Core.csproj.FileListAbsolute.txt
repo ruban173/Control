@@ -12,3 +12,4 @@ C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\GMap.NET.Core\obj\
 C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\GMap.NET.Core\obj\Debug\GMap.NET.Core.csproj.GenerateResource.Cache
 C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\GMap.NET.Core\obj\Debug\GMap.NET.Core.dll
 C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\GMap.NET.Core\obj\Debug\GMap.NET.Core.pdb
+C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\GMap.NET.Core\obj\Debug\GMap.NET.Core.csprojResolveAssemblyReference.cache
