@@ -44,7 +44,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gridSubsidiaryCompaniesRegion = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.gridInfCompany = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -61,7 +61,6 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSubsidiaryCompaniesRegion)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridInfCompany)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -175,6 +174,7 @@
             this.gridSubsidiaryCompanies.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSubsidiaryCompanies.Location = new System.Drawing.Point(3, 16);
             this.gridSubsidiaryCompanies.Name = "gridSubsidiaryCompanies";
+            this.gridSubsidiaryCompanies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSubsidiaryCompanies.Size = new System.Drawing.Size(394, 381);
             this.gridSubsidiaryCompanies.TabIndex = 5;
             this.gridSubsidiaryCompanies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSubsidiaryCompanies_CellClick);
@@ -216,14 +216,13 @@
             this.gridSubsidiaryCompaniesRegion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSubsidiaryCompaniesRegion.Location = new System.Drawing.Point(3, 16);
             this.gridSubsidiaryCompaniesRegion.Name = "gridSubsidiaryCompaniesRegion";
+            this.gridSubsidiaryCompaniesRegion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSubsidiaryCompaniesRegion.Size = new System.Drawing.Size(464, 209);
             this.gridSubsidiaryCompaniesRegion.TabIndex = 0;
-            this.gridSubsidiaryCompaniesRegion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSubsidiaryCompaniesRegion_CellClick);
-          
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.gridInfCompany);
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
@@ -232,14 +231,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Информация";
             // 
-            // gridInfCompany
+            // button1
             // 
-            this.gridInfCompany.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridInfCompany.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridInfCompany.Location = new System.Drawing.Point(3, 16);
-            this.gridInfCompany.Name = "gridInfCompany";
-            this.gridInfCompany.Size = new System.Drawing.Size(464, 149);
-            this.gridInfCompany.TabIndex = 0;
+            this.button1.Location = new System.Drawing.Point(6, 28);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 30);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Показатели";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Main
             // 
@@ -271,7 +271,6 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridSubsidiaryCompaniesRegion)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridInfCompany)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,10 +289,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView gridSubsidiaryCompaniesRegion;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView gridInfCompany;
         private System.Windows.Forms.ToolStripMenuItem дочернииКомпанииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }

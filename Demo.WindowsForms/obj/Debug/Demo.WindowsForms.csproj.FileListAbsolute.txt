@@ -62,3 +62,5 @@ C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\
 C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\bin\Debug\EntityFramework.xml
 C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\obj\Debug\Demo.WindowsForms.Indicators.resources
+C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\obj\Debug\Demo.WindowsForms.ParamsSaleOrder.resources
