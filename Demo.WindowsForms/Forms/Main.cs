@@ -19,6 +19,7 @@ namespace Demo.WindowsForms
         {
             InitializeComponent();
             db = new ConnectContext((new ConfigJson()).StringConnecting());
+            db.Subsidiary_companies_region.Local.CollectionChanged += Local_CollectionChanged;
         }
         public  Main(User_access user)
         {
@@ -40,27 +41,26 @@ namespace Demo.WindowsForms
                 var currentSubsidiaryCompanies = gridSubsidiaryCompanies.CurrentRow.DataBoundItem as Subsidiary_companies;
                 if (currentSubsidiaryCompanies != null) gridSubsidiaryCompaniesRegion.DataSource = currentSubsidiaryCompanies.Subsidiary_companies_region.ToList();
 
-                /*    gridGoods.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+                gridSubsidiaryCompaniesRegion.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
 
-                    gridGoods.Columns["title"].HeaderText = "Название";
-                    gridGoods.Columns["shelf_life"].HeaderText = "Срок годности";
-                    gridGoods.Columns["date_create"].HeaderText = "Дата производства";
-                    gridGoods.Columns["code"].HeaderText = "Штрих код";
-                    gridGoods.Columns["manufacturer"].HeaderText = "Производитель";
-                    gridGoods.Columns["count"].HeaderText = "Количество";
+                    gridSubsidiaryCompaniesRegion.Columns["city"].HeaderText = "Город";
+                    gridSubsidiaryCompaniesRegion.Columns["adress"].HeaderText = "Адрес";
+                    gridSubsidiaryCompaniesRegion.Columns["latitude"].HeaderText = "Широта";
+                    gridSubsidiaryCompaniesRegion.Columns["longitude"].HeaderText = "Долгота";
 
-                    gridGoods.Columns["id_goods_category"].Visible = false;
-                    gridGoods.Columns["id_subsidiary_companies_region"].Visible = false;
-                    gridGoods.Columns["status"].Visible = false;
-                    gridGoods.Columns["Subsidiary_companies_region"].Visible = false;
-                    gridGoods.Columns["price"].Visible = false;
-                    gridGoods.Columns["discont"].Visible = false;
-                    gridGoods.Columns["measurement"].Visible = false;
-                    gridGoods.Columns["Goods_category"].Visible = false;
-                    gridGoods.Columns["description"].Visible = false;
-                    gridGoods.Columns["basket"].Visible = false;
-                    gridGoods.Columns["Sale_basket"].Visible = false;
-                    */
+                    gridSubsidiaryCompaniesRegion.Columns["Goods"].Visible = false;
+                    gridSubsidiaryCompaniesRegion.Columns["Sale"].Visible = false;
+                    gridSubsidiaryCompaniesRegion.Columns["Subsidiary_companies"].Visible = false;
+                    gridSubsidiaryCompaniesRegion.Columns["id_subsidiary_companies"].Visible = false;
+
+                    gridSubsidiaryCompanies.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+                    gridSubsidiaryCompanies.Columns["title"].HeaderText = "Название";
+                    gridSubsidiaryCompanies.Columns["description"].HeaderText = "Описание";
+
+                    gridSubsidiaryCompanies.Columns["activity"].Visible = false;
+                    gridSubsidiaryCompanies.Columns["Subsidiary_companies_region"].Visible = false;
+                    gridSubsidiaryCompanies.Columns["date_up"].Visible = false;
+
                 gridSubsidiaryCompaniesRegion.ClearSelection();
                 gridSubsidiaryCompaniesRegion.CurrentCell = null;
 
@@ -106,6 +106,24 @@ namespace Demo.WindowsForms
         private void button1_Click(object sender, EventArgs e)
         {
             new Indicators( ref gridSubsidiaryCompanies,ref gridSubsidiaryCompaniesRegion).Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (gridSubsidiaryCompaniesRegion.CurrentRow != null)
+            {
+               
+                var Row = gridSubsidiaryCompaniesRegion.CurrentRow.DataBoundItem as Subsidiary_companies_region;
+                db.Subsidiary_companies_region.Remove(Row);
+                db.SaveChanges();
+               
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            db.SaveChanges();
         }
     }
 }

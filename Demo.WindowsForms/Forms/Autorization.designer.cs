@@ -44,6 +44,7 @@
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(205, 20);
             this.login.TabIndex = 0;
+            this.login.Text = "sys";
             // 
             // label1
             // 
@@ -70,6 +71,7 @@
             this.password.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(205, 20);
             this.password.TabIndex = 3;
+            this.password.Text = "password";
             // 
             // button_login
             // 

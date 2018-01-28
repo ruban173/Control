@@ -64,3 +64,10 @@ C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\
 C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\obj\Debug\Demo.WindowsForms.Indicators.resources
 C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\obj\Debug\Demo.WindowsForms.ParamsSaleOrder.resources
+C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\obj\Debug\Demo.WindowsForms.Forms.Reports.resources
+C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\obj\Debug\Demo.WindowsForms.AddEmployee.resources
+C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\obj\Debug\Demo.WindowsForms.Admin.resources
+C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\obj\Debug\Demo.WindowsForms.AdminSaleOrder.resources
+C:\Users\Axandr\Documents\Visual Studio 2015\Projects\Control\Demo.WindowsForms\obj\Debug\Demo.WindowsForms.UserAccess.resources

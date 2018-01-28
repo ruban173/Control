@@ -96,6 +96,16 @@ namespace Demo.WindowsForms
                     ChartCreate(idRegion);
 
                 }
+
+                gridIndicators.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+                gridIndicators.Columns["date_up"].HeaderText = "Дата";
+                gridIndicators.Columns["payment"].HeaderText = "Стоимость со скидкой";
+                gridIndicators.Columns["price"].HeaderText = "Стоимость без скидки";
+                gridIndicators.Columns["count"].HeaderText = "Количество";
+                gridIndicators.Columns["company"].HeaderText = "Дочерняя компания";
+
+                gridIndicators.Columns["id_reg"].Visible = false;
+
             }
 
             else
@@ -170,7 +180,14 @@ namespace Demo.WindowsForms
 
         }
 
+        private void gridIndicators_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
 
-
+        private void gridIndicators_DataSourceChanged(object sender, EventArgs e)
+        {
+        
+        }
     }
 }

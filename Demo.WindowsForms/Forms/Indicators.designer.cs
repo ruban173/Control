@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.gridIndicators = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,6 +43,7 @@
             this.Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupInfo = new System.Windows.Forms.GroupBox();
             this.labRes = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -77,7 +77,6 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -93,16 +92,6 @@
             this.button1.Text = "Продажи";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(97, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 28);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Лучший продавец";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // splitContainer1
             // 
@@ -130,6 +119,8 @@
             this.gridIndicators.Name = "gridIndicators";
             this.gridIndicators.Size = new System.Drawing.Size(403, 382);
             this.gridIndicators.TabIndex = 0;
+            this.gridIndicators.DataSourceChanged += new System.EventHandler(this.gridIndicators_DataSourceChanged);
+            this.gridIndicators.Paint += new System.Windows.Forms.PaintEventHandler(this.gridIndicators_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -150,6 +141,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button_column);
             this.groupBox1.Controls.Add(this.button3);
@@ -193,11 +185,11 @@
             // 
             // Chart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.Chart.ChartAreas.Add(chartArea2);
+            chartArea4.Name = "ChartArea1";
+            this.Chart.ChartAreas.Add(chartArea4);
             this.Chart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.Chart.Legends.Add(legend2);
+            legend4.Name = "Legend1";
+            this.Chart.Legends.Add(legend4);
             this.Chart.Location = new System.Drawing.Point(3, 196);
             this.Chart.Name = "Chart";
             this.Chart.Size = new System.Drawing.Size(492, 217);
@@ -224,6 +216,15 @@
             this.labRes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.labRes.Size = new System.Drawing.Size(486, 108);
             this.labRes.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(401, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Отчет";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Indicators
             // 
@@ -256,7 +257,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView gridIndicators;
         private System.Windows.Forms.DataVisualization.Charting.Chart Chart;
@@ -267,5 +267,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button_column;
         private System.Windows.Forms.TextBox labRes;
+        private System.Windows.Forms.Button button2;
     }
 }

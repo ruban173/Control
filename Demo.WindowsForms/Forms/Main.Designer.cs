@@ -44,6 +44,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gridSubsidiaryCompaniesRegion = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -170,6 +172,8 @@
             // 
             // gridSubsidiaryCompanies
             // 
+            this.gridSubsidiaryCompanies.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSubsidiaryCompanies.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridSubsidiaryCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridSubsidiaryCompanies.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSubsidiaryCompanies.Location = new System.Drawing.Point(3, 16);
@@ -212,6 +216,8 @@
             // 
             // gridSubsidiaryCompaniesRegion
             // 
+            this.gridSubsidiaryCompaniesRegion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSubsidiaryCompaniesRegion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gridSubsidiaryCompaniesRegion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridSubsidiaryCompaniesRegion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSubsidiaryCompaniesRegion.Location = new System.Drawing.Point(3, 16);
@@ -222,6 +228,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
@@ -230,6 +238,26 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Информация";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 113);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(97, 30);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Удалить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 77);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(97, 30);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Сохранить ";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -250,7 +278,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "Главная форма";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -294,5 +322,7 @@
         private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }

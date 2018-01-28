@@ -164,6 +164,7 @@
             this.MainMap.Size = new System.Drawing.Size(618, 698);
             this.MainMap.TabIndex = 0;
             this.MainMap.Zoom = 0D;
+            this.MainMap.Load += new System.EventHandler(this.MainMap_Load);
             // 
             // panel4
             // 
